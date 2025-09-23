@@ -5,7 +5,7 @@ import type { ResType } from "@/apis/shared"
 
 
 // 定义具体接口
-type ChannelItem = {
+export type ChannelItem = {
     id: number,
     name: string
 }
@@ -16,12 +16,12 @@ type ChannelsRes = {
 
 
 // 定义请求函数
-function fetchChannels(){
+function fetchChannelAPI(){
     return http.request<ResType<ChannelsRes>>({
         url: '/channels',
     })
 }
 
 export {
-    fetchChannels
+    fetchChannelAPI
 }
