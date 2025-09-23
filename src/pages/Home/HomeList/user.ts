@@ -1,0 +1,30 @@
+export const users =[
+    {id:'1',
+
+    avatar:'https://img2.baidu.com/it/u=2508887923,3052218723&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+    name:'小明',
+    description:'我是一名程序员'
+    },
+    {id:'2',
+    avatar:'https://img2.baidu.com/it/u=2508887923,3052218723&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+    name:'小红',
+    description:'我是一名设计师'
+    },
+    {id:'3',
+    avatar:'https://img2.baidu.com/it/u=2508887923,3052218723&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+    name:'小刚',
+    description:'我是一名产品经理'
+    },
+    {id:'4',
+    avatar:'https://img2.baidu.com/it/u=2508887923,3052218723&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+    description:'我是一名测试工程师'
+    },
+    {id:'5',
+    avatar:'https://img2.baidu.com/it/u=2508887923,3052218723&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+    description:'我是一名运维工程师'
+    },
+    {id:'6',
+    avatar:'https://img2.baidu.com/it/u=2508887923,3052218723&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+    description:'我是一名后端工程师'
+    }
+]

@@ -22,6 +22,38 @@ function fetchChannelAPI(){
     })
 }
 
+// 请求文章列表
+type ListItem ={
+    art_id: number,
+    title: string,
+    aut_id:string,
+    comm_count:number,
+    pubdate:string,
+    aut_name:string,
+    is_top:number,
+    cover:{
+        type:number,
+        images:string[]
+    }
+}
+
+type ListRes = {
+    list: ListItem[],
+    pre_timestamp:number
+}
+type reqParams={
+    channel_id:number,
+    timestamp?:number | string
+}
+function fetchListAPI(params:reqParams) {
+    return http.request<ResType<ListRes>>({
+        url: '/channels',
+        data: params
+    })
+}
+    
+
 export {
-    fetchChannelAPI
+    fetchChannelAPI,
+    fetchListAPI
 }
