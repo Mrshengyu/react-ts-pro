@@ -1,8 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
+//导入provider组件
+import { RouterProvider } from 'react-router-dom'
+import router from './router/index.tsx'
 
 createRoot(document.getElementById('root')!).render(
-    <App />
- 
+  <RouterProvider router={router}>
+  </RouterProvider>
+
 )
