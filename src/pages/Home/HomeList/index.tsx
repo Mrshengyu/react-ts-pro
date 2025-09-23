@@ -3,6 +3,7 @@ import { Image, List, InfiniteScroll } from 'antd-mobile';
 import { users } from './user'
 import React, { useState, useEffect } from 'react';
 import { fetchListAPI } from '@/apis/list';
+import { useNavigate } from'react-router-dom'
 // import { ListRes } from '@/apis/list'
 
 type Props = {
@@ -71,12 +72,20 @@ const HomeList = (props: Props) => {
 
     }
 
+const navigator = useNavigate()    
+const goTODetail = (id:string|undefined) => () => {
+    // 跳转到详情页
+    if(id){
+        navigator(`/detail?id=${id}`)
+    }
+}
 
     return (
         <>
             <List>
                 {users.map((item) => (
                     <List.Item key={item.id}
+                    onClick={goTODetail(item.id)}
                         prefix={
                             <Image
                                 fit="cover"
