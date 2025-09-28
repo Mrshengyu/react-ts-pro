@@ -1,12 +1,12 @@
 import React from 'react'
 import { Tabs } from 'antd-mobile'
 import "./style.css"
-import {useTabs} from './useTabs'
+import { useTabs } from './useTabs'
 import HomeList from './HomeList'
 export default function Home() {
   const { tagList } = useTabs();
 
-  
+
 
 
   return (
@@ -18,7 +18,7 @@ export default function Home() {
             tagList.map(item => {
               return <Tabs.Tab title={item.name} key={item.id}>
                 {/* list组件 */}
-                <HomeList channelId={item.id+''}/>
+                <HomeList channelId={item.id + ''} />
               </Tabs.Tab>
             })
           }
